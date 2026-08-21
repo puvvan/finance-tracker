@@ -1,3 +1,4 @@
+// AWS_SECRET_ACCESS_KEY=AKIAIOSFODNN7EXAMPLE
 import Image from "next/image";
 
 export default function Home() {
