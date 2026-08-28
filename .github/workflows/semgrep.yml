@@ -1,0 +1,21 @@
+name: SAST - Semgrep
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  semgrep:
+    runs-on: ubuntu-latest
+    container:
+      image: semgrep/semgrep
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Semgrep
+        run: semgrep ci --config auto
+        env:
+          SEMGREP_APP_TOKEN: ""
