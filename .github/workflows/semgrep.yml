@@ -16,6 +16,6 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run Semgrep
-        run: semgrep ci --config auto
+        run: semgrep scan --config auto
         env:
           SEMGREP_APP_TOKEN: ""
